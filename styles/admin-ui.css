@@ -1,0 +1,44 @@
+.accordion-trigger {
+  max-height: 30px !important;
+}
+#customize-theme-controls .customize-pane-parent {
+  overflow: hidden;
+}
+
+#profile-page .form-table:first-of-type,
+#profile-page h2,
+.user-admin-color-wrap,
+.user-facebook-wrap,
+.user-instagram-wrap,
+.user-linkedin-wrap,
+.user-twitter-wrap,
+.user-youtube-wrap,
+.user-myspace-wrap,
+.user-pinterest-wrap,
+.user-soundcloud-wrap,
+.user-tumblr-wrap,
+.user-wikipedia-wrap,
+.user-profile-picture,
+#yoast-seo-dashboard-widget .wordpress-feed,
+#dashboard_site_health,
+#profile-page .yoast-settings,
+#authordiv,
+#postcustom,
+#commentstatusdiv,
+.mce-btn[aria-label="Fullscreen"],
+.mce-btn[aria-label="Add LayerSlider"],
+.mce-btn[aria-label^="Insert Read More tag"],
+#wp-description-wrap + p,
+#profile-page #wp-description-media-buttons,
+.shortcode_insert_button[href="#avia_sc_notification"],
+#menu-item-avia_insert_multi,
+#menu-item-avia_insert_video,
+#menu-item-avia_insert_multi_video,
+#menu-item-avia_insert_audio,
+#menu-item-avia_insert_multi_audio {
+display: none !important;
+}
+
+.av_team_member img {
+max-width: 250px;
+}
