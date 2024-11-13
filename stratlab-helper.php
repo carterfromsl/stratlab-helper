@@ -3,7 +3,7 @@
 Plugin Name: StratLab Site Helper
 Plugin URI: https://github.com/carterfromsl/stratlab-helper/
 Description: A handy plugin for StratLab sites which allows us to roll out quick fixes to all websites at once.
-Version: 1.0.3.1
+Version: 1.0.3.2
 Author: StratLab Marketing
 Author URI: https://strategylab.ca
 Text Domain: stratlab-helper
@@ -12,29 +12,23 @@ Requires PHP: 7.0
 Update URI: https://github.com/carterfromsl/stratlab-helper/
 */
 
-// Check for updates from GitHub
-require_once plugin_dir_path(__FILE__) . 'slGitHubUpdater.php';
+// Connect with the StratLab Auto-Updater for plugin updates
+add_action('plugins_loaded', function () {
+    if (class_exists('StratLabUpdater')) {
+        $plugin_file = __FILE__;
+        $plugin_data = get_plugin_data($plugin_file);
 
-if (is_admin()) {
-    new slGitHubUpdater(__FILE__);
-}
-
-// Always enable auto-updates
-add_filter('auto_update_plugin', function($update, $item) {
-    // Check if this is the specific plugin to auto-update
-    if ($item->slug === 'stratlab-helper') {
-        return true;
+        do_action('stratlab_register_plugin', [
+            'slug' => plugin_basename($plugin_file),
+            'repo_url' => 'https://api.github.com/repos/carterfromsl/stratlab-helper/releases/latest',
+            'version' => $plugin_data['Version'], =
+            'name' => $plugin_data['Name'],
+            'author' => $plugin_data['Author'],
+            'homepage' => $plugin_data['PluginURI'],
+            'description' => $plugin_data['Description'], 
+        ]);
     }
-    return $update;
-}, 10, 2);
-
-// Display custom message in the auto-updates column for this plugin
-add_filter('plugin_auto_update_setting_html', function($html, $plugin_file) {
-    if ($plugin_file === plugin_basename(__FILE__)) {
-        $html = '<span style="color: #3c763d; font-weight: bold;">Auto-updates enabled.</span><br /><em>Go ahead and update now!</em>';
-    }
-    return $html;
-}, 10, 2);
+});
 
 // Enqueue scripts and styles
 function stratlab_enqueue_files() {
