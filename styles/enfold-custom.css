@@ -1,0 +1,581 @@
+#wp-admin-bar-edit a {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#wp-admin-bar-avia_ext,
+#wp-admin-bar-avia {
+  display: none !important;
+}
+
+#top textarea,
+#top input[type="text"],
+#top input[type="tel"],
+#top input[type="email"],
+#top input[type="password"],
+#top button,
+#top .button,
+#top select,
+#top .minor-meta,
+#top ul li,
+#top ol li,
+#top .main-title {
+  font-family: inherit;
+}
+
+#top a:where(:not(.wp-element-button)):not(:hover) {
+	text-decoration: none;
+}
+
+.avia-slideshow {
+  background: #111;
+}
+
+#top .av-hide-overflow {
+overflow: hidden;
+}
+
+#header_meta .menu a {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.gm-style-iw-d b,
+.gm-style-iw-d a {
+  color: var(--main-color);
+}
+.gm-style-iw-d p {
+  line-height: 1.3em;
+}
+
+#top .wp-caption-text {
+  font-family: inherit;
+  font-style: normal;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 989px) {
+  #top .wp-caption {
+    display: block;
+    clear: both;
+    float: none;
+    max-width: 500px;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 989px) {
+  #top .av_header_transparency #header_meta {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+#top .commentlist .children ul {
+  margin: 0 !important;
+  border: none !important;
+}
+
+#commentform .comment-form-author,
+#commentform .comment-form-email,
+#comment-form-cookies-consent {
+  z-index: 2 !important;
+  display: block;
+  position: relative;
+}
+
+#top .comment_text {
+  font-size: 15px;
+}
+#top .comment-reply-link,
+#top #cancel-comment-reply-link {
+  border: 1px solid currentColor;
+  padding: 2px 6px;
+  border-radius: 2px;
+  line-height: 1.5em;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.comment-form-cookies-consent {
+  position: relative;
+  z-index: 1;
+  display: block;
+  clear: both;
+  padding-bottom: 30px;
+}
+
+#commentform label {
+  width: max-content;
+  font-size: 15px !important;
+  position: unset !important;
+}
+#commentform label .required {
+  float: right;
+  padding: 0 !important;
+  line-height: 1.35em;
+  font-size: 1em !important;
+}
+
+#top .comment-form-url {
+  display: none !important;
+}
+#commentform input[type="text"] {
+  width: 100% !important;
+}
+
+.comment-form-cookies-consent label {
+  width: 95% !important;
+  float: left;
+  padding: 0 !important;
+}
+
+.comment-form-cookies-consent input {
+  float: left;
+  margin: 0 5px 0 0 !important;
+}
+
+@media only screen and (min-width: 767px) {
+  #commentform .comment-form-author,
+  #commentform .comment-form-email {
+    width: 49%;
+    margin-right: 1%;
+    float: left;
+  }
+}
+
+#top .avia-logo-element-container .slide-entry {
+  padding: 5px !important;
+}
+
+.avia-logo-element-container .avia-slideshow-controls a {
+  display: block !important;
+}
+
+.text-sep-tags {
+  display: none;
+}
+
+.format-link a[rel="bookmark"]::after {
+  content: "Read More";
+  display: block;
+  color: var(--main-color);
+  font-size: 0.8em;
+  border: 2px solid currentColor;
+  max-width: max-content;
+  padding: 4px 8px 2px 8px;
+  line-height: 1em;
+  margin: 5px 0;
+}
+
+/*---SOCKET---*/
+
+#socket * {
+  font-size: 13px;
+}
+
+#socket .menu li {
+  display: contents;
+}
+#socket .menu a {
+  display: inline-block;
+  float: none;
+  padding: 2px;
+  margin: 3px;
+}
+#top #socket nav {
+  margin: 0;
+}
+#socket .menu {
+  max-width: max-content;
+  margin: 5px auto;
+  text-align: right;
+}
+#socket a {
+  position: relative;
+  text-decoration: none !important;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+#socket a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  background: currentColor;
+  bottom: -2px;
+  left: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#socket a:hover:after {
+  width: 100%;
+}
+.copyright {
+  margin: 5px 0;
+}
+
+#socket .av-menu-button .avia-menu-text {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  border-radius: inherit !important;
+  color: inherit;
+}
+
+#socket .social_bookmarks a {
+  border: none;
+  font-size: 20px;
+  border-radius: 0;
+}
+#socket .social_bookmarks {
+  margin: -5px 0 -5px 15px;
+}
+
+#top #wrap_all .av-social-link-instagram a:focus,
+#top #wrap_all .av-social-link-instagram a:hover {
+	background: linear-gradient(45deg,#fa9b57,#f7763f 35%,#e34876 55%,#dc327c 75%,#c73390);
+}
+
+@media only screen and (max-width: 767px) {
+  #socket .menu {
+    text-align: center;
+  }
+  #top .comment_container {
+    padding: 0px;
+  }
+  #socket .social_bookmarks {
+    margin: 10px auto;
+    text-align: center;
+    width: max-content;
+    clear: both;
+    float: none;
+  }
+  .copyright {
+    text-align: center;
+    clear: both;
+    float: none;
+    width: 100%;
+    display: block;
+  }
+
+  #top .logo {
+    max-width: calc(100% - 75px);
+  }
+  #top .single-big {
+    padding-right: 0;
+  }
+}
+
+/*---LIGHTBOX---*/
+
+#top .mfp-img {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  max-height: 90vh !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#top .mfp-bg,
+#top .mfp-wrap {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  height: 100%;
+  width: 100%;
+}
+
+#top .mfp-bottom-bar {
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  top: unset;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  margin: 0;
+}
+
+#top .mfp-counter {
+padding: 5px;
+}
+
+#top .mfp-bottom-bar * {
+  color: inherit;
+  font-weight: normal;
+}
+
+#top .mfp-close {
+  top: 5px;
+  right: 5px;
+}
+
+/*---ENFOLD FACEBOOK LIKEBOX---*/
+
+#top .av_facebook_widget_button {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+}
+#top .av_facebook_widget_button {
+  color: #222;
+  padding-right: 10px;
+}
+#top .av_facebook_widget_button:hover {
+  color: #2d88ff;
+}
+#top .avia_fb_likebox .av_facebook_widget_icon {
+  font-size: 15px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-top: 3px;
+  background: #2d88ff;
+  border-radius: 100%;
+}
+#top .avia_fb_likebox .av_facebook_widget_main_wrap {
+  border-radius: 5px;
+  overflow: hidden;
+}
+#top .avia_fb_likebox .av_facebook_widget_logo_image {
+  border-radius: 100%;
+  overflow: hidden;
+  border: 2px solid #ddd;
+}
+
+/*-----MASONRY SORTING-----*/
+
+#top .av-large-gap .av-masonry-sort {
+	background: transparent;
+	padding: 10px;
+}
+#top .av-current-sort-title {
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #222;
+	color: var(--body-color);
+	margin-bottom: 10px;
+}
+#top .av-sort-by-term a,
+#top .sort_by_cat a {
+	display: inline-block;
+	color: #222;
+	color: var(--body-color);
+	padding: 3px 15px;
+	line-height: 1.75em;
+	position: relative;
+}
+
+.av-sort-by-term a:not(.active_sort):hover,
+.sort_by_cat a:not(.active_sort):hover {
+	z-index: 10;
+}
+.text-sep.avia_show_sort,
+.sort_by_cat .text-sep {
+	display: none;
+}
+
+#top #js_sort_items {
+  background: transparent;
+  text-align: center;
+}
+.av-sort-by-term a,
+#js_sort_items a {
+  font-size: 14px;
+  margin: 4px 0;
+  background: #f7f7f7;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.av-sort-by-term a::before,
+#js_sort_items a::before {
+  content: "";
+  background: #333;
+  background: var(--body-color);
+  opacity: 0.15;
+  width: 100%;
+  height: 3px;
+  bottom: 0px;
+  left: 0;
+  transition: all 0.3s ease;
+  position: absolute;
+}
+.av-sort-by-term a::after,
+#js_sort_items a::after {
+  content: "";
+  background: black;
+  background: var(--main-color);
+  width: 0%;
+  height: 3px;
+  bottom: 0px;
+  right: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+}
+.av-sort-by-term a.active_sort::after,
+#js_sort_items a.active_sort::after {
+  width: 100%;
+  right: unset;
+  left: 0;
+}
+#top .av-sort-by-term a:hover,
+#top .av-sort-by-term a.active_sort,
+#top #js_sort_items a:hover,
+#top #js_sort_items a.active_sort {
+  opacity: 1;
+  background: white;
+  background: var(--bg-color);
+  color: black;
+  color: var(--main-color);
+	box-shadow: 0 0 7px rgba(0,0,0,0.075);
+}
+
+/*---AJAX PORTFOLIO---*/
+.grid-entry-title {
+  font-size: 20px;
+  text-align: center;
+}
+@media only screen and (min-width: 767px) {
+  #top .portfolio-preview-image {
+    width: 40%;
+    padding: 0;
+  }
+  .portfolio-preview-content {
+    width: 60%;
+  }
+}
+.grid-entry .inner-entry {
+  margin: 5px;
+}
+
+/*---PASSWORD PAGE---*/
+#top .post-password-form {
+  margin: 80px auto;
+  max-width: 550px;
+  padding: 10px 20px;
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+#top .post-password-form input[type="password"] {
+  background-color: white;
+}
+
+/*---GRAVITYFORMS---*/
+
+#top .ginput_container label,
+#top legend {
+  font-weight: bold;
+  font-size: inherit;
+}
+#top .gfield_required {
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 1em;
+  line-height: 0;
+}
+
+#top .ginput_total {
+  border: none;
+  padding: 0;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+@media only print {
+  #header_meta,
+  #footer-page {
+    display: none;
+  }
+  .sidebar {
+    display: none !important;
+  }
+  .container .av-content-small.units {
+    width: 100% !important;
+    border: none;
+  }
+  .pmpro_actions_nav {
+    display: none;
+  }
+}
+
+#top
+  .gform-theme-datepicker:not(.gform-legacy-datepicker)
+  .ui-datepicker-header
+  select.ui-datepicker-month {
+  margin-right: 20px;
+  -moz-text-align-last: right;
+  text-align-last: right;
+}
+#top
+  .gform-theme-datepicker:not(.gform-legacy-datepicker)
+  .ui-datepicker-header
+  select {
+  background-color: transparent;
+  background-image: url(/wp-content/plugins/gravityforms/images/theme/down-arrow.svg);
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  color: #585e6a;
+  color: var(--c-text-default);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-size: var(--t-font-size-label);
+  font-weight: 500;
+  font-weight: var(--t-font-weight-medium);
+  height: auto;
+  min-height: 0;
+  padding: 0 22px 0 0;
+  -webkit-appearance: none;
+  width: auto;
+}
+#top .ui-datepicker:not(.gform-legacy-datepicker) .ui-datepicker-title select {
+  margin: 0 4px;
+}
+
+#top .av-zero-padding {
+  padding: 0;
+}
+
+#socket a[href="https://stratlab.ca/"]::before,
+#socket a[href="https://strategylab.ca/"]::before
+{
+  content: "";
+  display: inline-block;
+  float: right;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.15em 0.25em;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAC4jAAAuIwF4pT92AAADF0lEQVRogeWav0sjQRTHv7uJxtODaHFVkEBACBGMBguxkNgIQqorAgcprQWxFK448ODwr7AMWG9lYSViogQEISRYWARzUaOHP85E8644Dk7zxss4s9kJ94E0702W73eYeftmEgvARwDfAATRm/wA8NkCcAtg0GMxqjRsAC2vVWigYQO491qFBn7aXivQhV+UiMVimJmZgW2b4ZWIsL+/j6OjI+GY7wDo78/ExASZyvT0NL3UC6DGTvf8/LzuCdXGwsICG2eN3N+bu/+bzSYbZ420WuZW5KenJzZuxk7ukGKxiK2tLTYnrFoc+XweKysruLy8hGVZWsR1ChHh+PhYmJcykslkUCwWlUW5gdTSuru7c0uHMlJGHh8f3dKhjJSRcDjslg5lpPZINpvF2toa6vW6W3pYLMtCq9XC4eEhzs7OhOPaWpSlpSWvOxGWm5sbGh8f77xFMZWhoSGkUik2xxrx+XyuClKh0WiwcdZIX1+fq2JUkGpRHMdBrVZzVZBu2Kp1cnKCsbExTE1NwbZtEFFXRQWDQayvryMWi3X8HWH5vb6+xs7Ojg5db6JcLr96GnyJsVWrWq1KjTfWiOxdgbFGgkG5i0/hHgkEApicnITP58PDwwMODg5efVAikVC+cflTVIaHh7GxsSH9/bYWJRwO0+np6bP2wHEc8vv9be3ByMgIFQqFrrUpy8vLnbcoqVQKo6Ojz2KLi4uIRCJtY+fm5hCPx6VnTzesEdHbk3vj+/1SDbQyovaJNSI6QHEGu312HxgYYOPKVWt3dxdXV1eqj+kIIoLjOGxOeV1UKhVEo1Ekk0lXu2YiQi6XQ7lcZvNaFni1WkU2m9XxqDdj7AtRlv/zOqi/v98tHcpI7ZHNzU2srq7i4uICQHdLLxGhVCq9OqZnblEKhQKFQqHev0WJx+NIp9NsjjViyu+GHKKWiFU8OGju/wdEBYc14uVZ/V9sb2+zcQu/N/uHl4lEIoHZ2VljlhkRYW9vD7lcjkufC430GOdmTLcGbAB8g99bBGxo6oA95p0F4BOArwDeeyzmrdwC+PILq0g/qU2rhdMAAAAASUVORK5CYII=");
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-filter: invert(0);
+  filter: invert(0);
+}
+
+#socket a[href="https://stratlab.ca/"]:hover::before,
+#socket a[href="https://strategylab.ca/"]:hover::before
+{
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
