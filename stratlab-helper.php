@@ -28,6 +28,14 @@ add_filter('auto_update_plugin', function($update, $item) {
     return $update;
 }, 10, 2);
 
+// Display custom message in the auto-updates column for this plugin
+add_filter('plugin_auto_update_setting_html', function($html, $plugin_file) {
+    if ($plugin_file === plugin_basename(__FILE__)) {
+        $html = '<span style="color: #3c763d; font-weight: bold;">Auto-updates enabled</span>';
+    }
+    return $html;
+}, 10, 2);
+
 // Enqueue scripts and styles
 function stratlab_enqueue_files() {
     // Enqueue JavaScript file (always)
