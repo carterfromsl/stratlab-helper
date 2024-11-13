@@ -1,15 +1,15 @@
 <?php
 /*
 Plugin Name: StratLab Site Helper
-Plugin URI: https://github.com/carterfromsl/stratlab-custom/
+Plugin URI: https://github.com/carterfromsl/stratlab-helper/
 Description: A handy plugin for StratLab sites which allows us to roll out quick fixes to all websites at once.
 Version: 1.0
 Author: StratLab Marketing
 Author URI: https://strategylab.ca
-Text Domain: stratlab-custom
+Text Domain: stratlab-helper
 Requires at least: 6.0
 Requires PHP: 7.0
-Update URI: https://github.com/carterfromsl/stratlab-custom/
+Update URI: https://github.com/carterfromsl/stratlab-helper/
 */
 
 // Check for updates from GitHub
@@ -21,8 +21,7 @@ if (is_admin()) {
 
 // Enqueue scripts and styles if the active theme is "enfold"
 function stratlab_enqueue_custom_files() {
-    if (wp_get_theme()->get('Name') === 'Enfold') {
-        // Enqueue JavaScript file
+    // Enqueue JavaScript file
         wp_enqueue_script(
             'stratlab-functions-js',
             plugin_dir_url(__FILE__) . 'js/functions.js',
@@ -30,7 +29,8 @@ function stratlab_enqueue_custom_files() {
             filemtime(plugin_dir_path(__FILE__) . 'js/functions.js'), // Version based on file modification time
             true // Load in footer
         );
-
+    
+    if (wp_get_theme()->get('Name') === 'Enfold') {
         // Enqueue CSS file
         wp_enqueue_style(
             'stratlab-enfold-custom-css',
