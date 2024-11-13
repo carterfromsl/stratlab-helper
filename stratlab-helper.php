@@ -3,7 +3,7 @@
 Plugin Name: StratLab Site Helper
 Plugin URI: https://github.com/carterfromsl/stratlab-helper/
 Description: A handy plugin for StratLab sites which allows us to roll out quick fixes to all websites at once.
-Version: 1.0.3
+Version: 1.0.3.1
 Author: StratLab Marketing
 Author URI: https://strategylab.ca
 Text Domain: stratlab-helper
