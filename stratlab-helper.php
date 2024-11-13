@@ -19,6 +19,15 @@ if (is_admin()) {
     new slGitHubUpdater(__FILE__);
 }
 
+// Always enable auto-updates
+add_filter('auto_update_plugin', function($update, $item) {
+    // Check if this is the specific plugin to auto-update
+    if ($item->slug === 'stratlab-helper') {
+        return true;
+    }
+    return $update;
+}, 10, 2);
+
 // Enqueue scripts and styles
 function stratlab_enqueue_files() {
     // Enqueue JavaScript file (always)
