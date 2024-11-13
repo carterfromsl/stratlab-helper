@@ -1,6 +1,6 @@
 <?php
 
-class GitHubUpdater {
+class slGitHubUpdater {
     private $slug;
     private $pluginData;
     private $githubAPIResult;
@@ -23,7 +23,7 @@ class GitHubUpdater {
 
     private function getRepositoryInfo() {
         if (is_null($this->githubAPIResult)) {
-            $url = "https://api.github.com/repos/carterfromsl/css-manager/releases/latest";
+            $url = "https://api.github.com/repos/carterfromsl/stratlab-helper/releases/latest";
 
             $args = [
                 'headers' => [
