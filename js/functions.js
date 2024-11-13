@@ -17,7 +17,7 @@ window.onload = function() {
         // Create #getYear as a span
         yearElement = document.createElement("span");
         yearElement.id = "getYear";
-        yearElement.innerHTML = `&copy; ${new Date().getFullYear()}`;
+        yearElement.innerHTML = `&copy; ${new Date().getFullYear()} `;
         
         // Insert the year element at the beginning of .copyright
         copyrightElement.prepend(yearElement);
