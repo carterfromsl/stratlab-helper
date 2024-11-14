@@ -3,7 +3,7 @@
 Plugin Name: StratLab Site Helper
 Plugin URI: https://github.com/carterfromsl/stratlab-helper/
 Description: A handy bug-fixing and utility plugin for StratLab sites.
-Version: 1.0.3.4
+Version: 1.0.3.5
 Author: StratLab Marketing
 Author URI: https://strategylab.ca
 Text Domain: stratlab-helper
@@ -12,8 +12,13 @@ Requires PHP: 7.0
 Update URI: https://github.com/carterfromsl/stratlab-helper/
 */
 
+// Connect with the StratLab Auto-Updater for plugin updates
 add_action('plugins_loaded', function() {
     if (class_exists('StratLabUpdater')) {
+        if (!function_exists('get_plugin_data')) {
+            require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        }
+        
         $plugin_file = __FILE__;
         $plugin_data = get_plugin_data($plugin_file);
 
@@ -29,7 +34,6 @@ add_action('plugins_loaded', function() {
         ]);
     }
 });
-
 
 // Enqueue scripts and styles
 function stratlab_enqueue_files() {
